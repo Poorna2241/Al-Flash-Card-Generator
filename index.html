@@ -3,298 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Flashcard Generator - Presentation</title>
+    <title> 🤖 AI Flashcard Generator</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
- <body>
-    <div class="slide-number" id="slideNumber">1 / 12</div>
-   
-    <div class="slide-container">
-        <!-- Slide 1: Title -->
-        <div class="slide active" data-slide="1">
-            <div class="center">
-                <h1> AI-Powered Flashcard Generator</h1>
-                <p class="subtitle">Transforming Study Notes into Interactive Learning Tools</p>
-                <div style="margin-top: 60px;">
-                    
-                    <p style="font-size: 1.1em; opacity: 0.9; margin-top: 10px;">Simple AI Model Development</p>
-                    <p style="font-size: 1.1em; opacity: 0.9; margin-top: 10px;">CCS2063 | CSE2063 - Artificial Intelligence </p>
-                </div>
-            </div>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Flashcard Generator</h1>
+            <p>Transform your notes into interactive flashcards instantly!</p>
         </div>
 
-        <!-- Slide 2: Group Members -->
-        <div class="slide" data-slide="2">
-            <h2>👥 Group Members</h2>
-            <div class="center" style="margin-top: 20px;">
-                <div class="grid-2" style="gap: 20px;">
-                    <div class="card" style="padding: 40px;">
-                        <div class="emoji">👨‍💻</div>
-                        <h3 style="margin-bottom: 10px;">O.P.S.Perera</h3>
-                        <p style="font-size: 1.1em; opacity: 0.9;">Index Number: FC222026</p>
-                        <p style="font-size: 1.1em; opacity: 0.9;">Registration Number: FC115652</p>
-        
-                    </div>
-                    <div class="card" style="padding: 40px;">
-                        <div class="emoji">👨‍💻</div>
-                        <h3 style="margin-bottom: 10px;">S.H.G.Mithila</h3>
-                        <p style="font-size: 1.1em; opacity: 0.9;">Index Number: FC221013</p>
-                        <p style="font-size: 1.1em; opacity: 0.9;">Registration Number: FC115264</p>
-                    </div>
+        <div class="main-content">
+            <div class="card">
+                <h2><span class="icon">📝</span> Your Notes</h2>
+                <textarea id="notesInput" placeholder="Paste your study notes here..."></textarea>
+                
+                <div class="button-group">
+                    <button class="btn-primary" onclick="generateFlashcards()">
+                        ✨ Generate Flashcards
+                    </button>
+                    <button class="btn-secondary" onclick="loadSample()">
+                        📋 Load Sample
+                    </button>
+                    <button class="btn-secondary" onclick="clearNotes()">
+                        🗑️ Clear
+                    </button>
                 </div>
-                <div class="grid-2" style="gap: 40px; margin-top: 30px;">
-                    <div class="card" style="padding: 40px;">
-                        <div class="emoji">👨‍💻</div>
-                        <h3 style="margin-bottom: 10px;">M.A.S. Karunaratne</h3>
-                        <p style="font-size: 1.1em; opacity: 0.9;">Index Number: FC221015</p>
-                        <p style="font-size: 1.1em; opacity: 0.9;">Registration Number: FC115268</p>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3: Introduction -->
-        <div class="slide" data-slide="3">
-            <h2>📚 Introduction</h2>
-            <div class="box">
-                <h3>What is This Project?</h3>
-                <p>An intelligent tool that automatically converts educational notes into interactive flashcards using AI-powered pattern recognition.</p>
-            </div>
-            <div class="grid-2">
-                <div class="card">
-                    <div class="emoji">⚡</div>
-                    <h3>Fast & Efficient</h3>
-                    <p>Generates flashcards in seconds</p>
-                </div>
-                <div class="card">
-                    <div class="emoji">🎯</div>
-                    <h3>Smart Extraction</h3>
-                    <p>Identifies key concepts automatically</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3: Problem Statement -->
-        <div class="slide" data-slide="4">
-            <h2>❌ Problem Statement</h2>
-            <h3>The Challenge Students Face:</h3>
-            <ul>
-                <li><strong>Time-Consuming:</strong> Manually creating flashcards takes hours</li>
-                <li><strong>Inconsistent Coverage:</strong> Important concepts may be missed</li>
-                <li><strong>Tedious Work:</strong> Repetitive formatting and organization</li>
-                <li><strong>Limited Efficiency:</strong> Difficult to study large volumes of material</li>
-            </ul>
-            <div class="box" style="margin-top: 30px;">
-                <p><strong>💡 Solution:</strong> Automate the flashcard creation process using AI pattern recognition to save time and ensure comprehensive coverage!</p>
-            </div>
-        </div>
-
-        <!-- Slide 4: How It Works -->
-        <div class="slide" data-slide="5">
-            <h2>⚙️ How It Works - AI Algorithm</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="emoji">📝</div>
-                    <h3>Step 1</h3>
-                    <p>Load and preprocess study notes</p>
-                </div>
-                <div class="card">
-                    <div class="emoji">🔍</div>
-                    <h3>Step 2</h3>
-                    <p>Pattern recognition using regex</p>
-                </div>
-                <div class="card">
-                    <div class="emoji">✨</div>
-                    <h3>Step 3</h3>
-                    <p>Generate Q&A pairs</p>
-                </div>
-            </div>
-            <div class="box" style="margin-top: 30px;">
-                <h3>AI Techniques Used:</h3>
-                <ul>
-                    <li><strong>Natural Language Processing (NLP):</strong> Text analysis and pattern matching</li>
-                    <li><strong>Regular Expressions:</strong> Definition and concept extraction</li>
-                    <li><strong>Rule-Based AI:</strong> Simple yet effective approach</li>
-                </ul>
-            </div>
-        </div>
-
- 
-
-        <!-- Slide 6: Technology Stack -->
-        <div class="slide" data-slide="7">
-            <h2>💻 Technology Stack</h2>
-            <div class="grid-2">
-                <div>
-                    <h3>Core Technologies:</h3>
-                    <ul>
-                        <li><strong>Python 3.x</strong> - Programming language</li>
-                        <li><strong>Regular Expressions</strong> - Pattern matching</li>
-                        <li><strong>JSON</strong> - Data storage format</li>
-                        <li><strong>Rule-based NLP</strong> - AI approach</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Why This Approach?</h3>
-                    <div class="card">
-                        <p><strong>✅ Simple & Understandable</strong></p>
-                        <p>No complex ML libraries needed</p>
-                    </div>
-                    <div class="card" style="margin-top: 15px;">
-                        <p><strong>⚡ Fast Processing</strong></p>
-                        <p>Instant results, no training time</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 7: Live Demo -->
-        <div class="slide" data-slide="8">
-            <h2>🎬 Live Demonstration</h2>
-            <div class="demo-section">
-                <h3>What We'll Show:</h3>
-                <ul>
-                    <li><strong>Step 1:</strong> Load sample educational notes</li>
-                    <li><strong>Step 2:</strong> Click "Generate Flashcards" button</li>
-                    <li><strong>Step 3:</strong> View automatically generated flashcards</li>
-                    <li><strong>Step 4:</strong> Use interactive study mode</li>
-                    <li><strong>Step 5:</strong> Download flashcards as JSON</li>
-                </ul>
-            </div>
-            <div class="box">
-                <p style="font-size: 1.4em; text-align: center;"><strong>🌐 Open the web application now to demonstrate!</strong></p>
-            </div>
-        </div>
-
-        <!-- Slide 8: Code Walkthrough -->
-        <div class="slide" data-slide="9">
-            <h2>🐍 Python Code Highlights</h2>
-            <div class="code-box"><pre>
-    class FlashcardGenerator:
-    def extract_definitions(self, sentences):
-        patterns = [
-            r'(.+?)\s+is\s+(.+)',
-            r'(.+?)\s+means\s+(.+)'
-        ]
-        for sentence in sentences:
-            for pattern in patterns:
-                match = re.match(pattern, sentence)
-                if match:
-                    flashcards.append({
-                        'question': f"What is {match[1]}?",
-                        'answer': match[2]
-                    })</pre></div>
-            <p style="margin-top: 20px;"><strong>Key Features:</strong> Simple regex patterns, easy to understand, modifiable by students</p>
-        </div>
-
-        <!-- Slide 9: Results & Evaluation -->
-        <div class="slide" data-slide="10">
-            <h2>📊 Results & Evaluation</h2>
-            <table>
-                <tr>
-                    <th>Metric</th>
-                    <th>Result</th>
-                </tr>
-                <tr>
-                    <td>Extraction Accuracy</td>
-                    <td>75-80% of definitions captured</td>
-                </tr>
-                <tr>
-                    <td>Processing Speed</td>
-                    <td>Instant (< 1 second)</td>
-                </tr>
-                <tr>
-                    <td>Flashcards per Page</td>
-                    <td>5-10 flashcards generated</td>
-                </tr>
-                <tr>
-                    <td>Question Types</td>
-                    <td>3 types (definition, fill-in, list)</td>
-                </tr>
-            </table>
-            <div class="box" style="margin-top: 20px;">
-                <p><strong>✅ Success:</strong> The tool successfully automates flashcard creation and saves students significant time!</p>
-            </div>
-        </div>
-
-        <!-- Slide 10: Strengths & Limitations -->
-        <div class="slide" data-slide="11">
-            <h2>⚖️ Strengths & Limitations</h2>
-            <div class="pros-cons">
-                <div class="pros">
-                    <h3>✅ Strengths:</h3>
-                    <ul>
-                        <li>Fast and efficient</li>
-                        <li>Easy to understand</li>
-                        <li>No training required</li>
-                        <li>Works offline</li>
-                        <li>Customizable patterns</li>
-                    </ul>
-                </div>
-                <div class="cons">
-                    <h3>⚠️ Limitations:</h3>
-                    <ul>
-                        <li>Relies on structured text</li>
-                        <li>Limited context understanding</li>
-                        <li>English language only</li>
-                        <li>Fixed question formats</li>
-                        <li>No learning capability</li>
+                <div class="sample-notes">
+                    <h4>💡 Tips for Best Results:</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li>Include clear definitions (X is Y, X means Y)</li>
+                        <li>Use numbered or bulleted lists</li>
+                        <li>Highlight important concepts with keywords</li>
                     </ul>
                 </div>
             </div>
-        </div>
 
-        <!-- Slide 11: Future Enhancements -->
-        <div class="slide" data-slide="12">
-            <h2>🚀 Future Enhancements</h2>
-            <div class="grid-2">
-                <div class="box">
-                    <h3>Short-term Goals:</h3>
-                    <ul>
-                        <li>Support for multiple languages</li>
-                        <li>Image recognition from handwritten notes</li>
-                        <li>More question types</li>
-                        <li>Difficulty level ratings</li>
+            <div class="card">
+                <h2><span class="icon">⚙️</span> How It Works</h2>
+                <div style="line-height: 1.8; color: #555;">
+                    <p><strong>Step 1:</strong> The AI analyzes your notes using pattern recognition</p>
+                    <p><strong>Step 2:</strong> Extracts definitions, key concepts, and lists</p>
+                    <p><strong>Step 3:</strong> Generates questions in multiple formats:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>📖 Definition Questions</li>
+                        <li>📝 Fill-in-the-Blank</li>
+                        <li>📋 List Questions</li>
                     </ul>
+                    <p style="margin-top: 15px;"><strong>Step 4:</strong> Review flashcards or enter study mode!</p>
                 </div>
-                <div class="box">
-                    <h3>Long-term Vision:</h3>
-                    <ul>
-                        <li>Integration with deep learning models</li>
-                        <li>Spaced repetition algorithm</li>
-                        <li>Mobile app development</li>
-                        <li>Collaborative study features</li>
-                    </ul>
+                
+                <div style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                    <strong>🚀 Simple AI Technology:</strong>
+                    <p style="margin-top: 8px; font-size: 0.95em; color: #555;">Uses rule-based NLP with regex patterns - no complex machine learning needed!</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 12: Conclusion -->
-        <div class="slide" data-slide="13">
-            <h2>🎯 Conclusion</h2>
-            <div class="box">
-                <h3>Key Takeaways:</h3>
-                <ul>
-                    <li><strong>Problem Solved:</strong> Automated flashcard creation saves hours of manual work</li>
-                    <li><strong>Simple AI:</strong> Effective solutions don't always need complex algorithms</li>
-                    <li><strong>Practical Application:</strong> Real-world tool that students can use immediately</li>
-                    <li><strong>Educational Value:</strong> Demonstrates AI concepts in an understandable way</li>
-                </ul>
-            </div>
-            <div class="center" style="margin-top: 40px;">
-                <h1 style="font-size: 2.5em;">Thank You! </h1>
+        <div id="alertContainer"></div>
+
+        <div id="statsContainer"></div>
+
+        <div class="flashcards-container" id="flashcardsContainer">
+            <div class="empty-state">
+                <div class="empty-state-icon">📚</div>
+                <h3>No flashcards yet</h3>
+                <p>Enter your notes above and click "Generate Flashcards" to get started!</p>
             </div>
         </div>
+        <div id="studyModeContainer"></div>
+
+    
     </div>
 
-    <div class="controls">
-        <button class="btn" id="prevBtn" onclick="previousSlide()">⬅️ Previous</button>
-        <button class="btn" id="nextBtn" onclick="nextSlide()">Next ➡️</button>
-    </div>
-
-    <script src="script.js"> </script>
+    <script src="script.js"></script>   
 </body>
 </html>
